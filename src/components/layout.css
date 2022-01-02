@@ -30,6 +30,9 @@
   --fz-xl: 20px;
   --fz-xxl: 22px;
   --fz-heading: 32px;
+
+  /* Globals */
+  --nav-height: 100px;
 }
 
 html {
@@ -93,4 +96,12 @@ h6 {
 small,
 .text_small {
   font-size: 0.667rem;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  color: inherit;
+  position: relative;
 }

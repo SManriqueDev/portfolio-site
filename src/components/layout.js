@@ -26,8 +26,8 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
-      {/* <Header siteTitle={data.site.siteMetadata?.title || `Title`} /> */}
+    <div style={{ display: "flex", flexDirection: "column" }}>
+      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={
           {
@@ -48,7 +48,7 @@ const Layout = ({ children }) => {
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 
