@@ -2,12 +2,14 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import Btn from "../components/btn"
 import * as headerStyles from "./header.module.css"
-
+import Logo from "../components/personal-logo"
 const Header = ({ siteTitle }) => (
   <header className={headerStyles.header}>
     <nav className={headerStyles.nav}>
       {/* Logo */}
-      <div className={headerStyles.logo}></div>
+      <div className={headerStyles.logo}>
+        <Logo />
+      </div>
       {/* Menu */}
       <div className={headerStyles.menu}>
         <ol>

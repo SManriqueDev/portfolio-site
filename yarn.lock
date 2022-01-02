@@ -1088,16 +1088,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fontsource/alegreya-sans@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/alegreya-sans/-/alegreya-sans-4.5.0.tgz#81d6234c18fb9c603db3913b11bc3fae39f131da"
-  integrity sha512-3fmvF7IH9N0jP1U5RybaBWtglD8xBuU74DnuYhSPQQ2YSNUsZAqww8vSPELt9cceeZjlULvIoS/x5+tEKTDaJA==
-
-"@fontsource/space-mono@^4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@fontsource/space-mono/-/space-mono-4.5.0.tgz#634cb042d570f9341f4449c6bf0b4c57c562c0c2"
-  integrity sha512-1tzGlLH2N/k1sovGSA4s7MpIRMciKeJbXKfdrKc1H84lg1FPcmiYGYdWiQA5MoQyjF6Bqx+IWpyIcOktMKvViA==
-
 "@gatsbyjs/reach-router@^1.3.6":
   version "1.3.6"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/reach-router/-/reach-router-1.3.6.tgz#4e8225836959be247890b66f21a3198a0589e34d"

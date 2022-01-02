@@ -5,8 +5,6 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
-    "@fontsource/alegreya-sans": "^4.5.0",
-    "@fontsource/space-mono": "^4.5.0",
     "gatsby": "^4.4.0",
     "gatsby-plugin-gatsby-cloud": "^4.4.0",
     "gatsby-plugin-image": "^2.4.0",
