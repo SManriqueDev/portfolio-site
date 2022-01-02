@@ -10,6 +10,9 @@
   right: 20px;
 
   height: var(--nav-height);
+
+  background-color: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(10px);
 }
 .nav {
   width: 100%;
@@ -25,8 +28,14 @@
 .menu {
   display: flex;
   align-items: center;
+}
+.menu ol {
+  display: flex;
+  align-items: center;
   justify-content: space-between;
   list-style: none;
+  padding: 0px;
+  margin: 0px;
 }
 .item {
   margin: 0px 5px;

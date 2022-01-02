@@ -24,12 +24,9 @@ const Hero = () => (
     </h2>
     <h2 style={{ fontWeight: "600" }}>Creador de software web.</h2>
     <p style={{ fontSize: "1.2rem", maxWidth: "540px" }}>
-      Soy desarrollador de software, ingeniero de Sistemas en formación y
-      apasionado de las nuevas tecnologías. Me gusta el software que busca
-      aportar cambios y valor al mundo que me rodea. Desarrollo siempre
-      iniciativas y planes de acción innovadores siempre aportando mi lado
-      creativo y mi experiencia técnica para alcanzar todos los objetivos de un
-      proyecto.
+      Soy ingeniero de sistemas en formación y desarrollador de software
+      especializado en la creación de experiencias digitales en la web. Me gusta
+      el software que busca aportar cambios y valor al mundo.
     </p>
 
     <Btn style={{ marginTop: `1.45rem` }}>Descargar CV!</Btn>

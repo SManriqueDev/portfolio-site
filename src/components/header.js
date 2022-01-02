@@ -1,6 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link } from "gatsby"
+import Btn from "../components/btn"
 import * as headerStyles from "./header.module.css"
 
 const Header = ({ siteTitle }) => (
@@ -9,22 +9,23 @@ const Header = ({ siteTitle }) => (
       {/* Logo */}
       <div className={headerStyles.logo}></div>
       {/* Menu */}
-      <div>
-        <ol className={headerStyles.menu}>
+      <div className={headerStyles.menu}>
+        <ol>
           <li className={headerStyles.item}>
-            <a href="">Sobre mi</a>{" "}
+            <a href="/#about">Sobre mi</a>{" "}
           </li>
           <li className={headerStyles.item}>
-            <a href="">Experiencia</a>
+            <a href="/#jobs">Experiencia</a>
           </li>
 
           <li className={headerStyles.item}>
-            <a href="">Mi trabajo</a>
+            <a href="/#projects">Mi trabajo</a>
           </li>
           <li className={headerStyles.item}>
-            <a href="">Contactame</a>
+            <a href="/#contact">Contactame</a>
           </li>
         </ol>
+        <Btn style={{ marginLeft: "15px" }}>Currículo</Btn>
       </div>
     </nav>
   </header>
