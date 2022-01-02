@@ -1,0 +1,10 @@
+.btn {
+  border-color: var(--green);
+  background-color: transparent;
+  color: var(--green);
+  padding: 1.25rem 1.75rem;
+  font-size: var(--fz-sm);
+  border-radius: var(--border-radius);
+  outline: none;
+  font-family: var(--font-mono);
+}

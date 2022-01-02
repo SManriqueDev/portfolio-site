@@ -1,0 +1,41 @@
+@font-face {
+  font-family: "Calibre";
+  font-weight: 400;
+  src: url("../fonts/CalibreRegular.otf");
+}
+
+@font-face {
+  font-family: "Calibre";
+  src: url("../fonts/CalibreSemibold.otf");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src: url("../fonts/CalibreBold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Calibre";
+  src: url("../fonts/CalibreBlack.otf");
+  font-weight: 900;
+}
+
+@font-face {
+  font-family: "SF Mono";
+  font-weight: 400;
+  src: url("../fonts/SFMonoRegular.otf");
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src: url("../fonts/SFMonoBold.otf");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SF Mono";
+  src: url("../fonts/SFMonoHeavy.otf");
+  font-weight: 900;
+}
