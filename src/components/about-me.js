@@ -17,17 +17,20 @@ const AboutMe = () => (
         </p>
         <p>
           Avance rápido hasta el día de hoy, y tuve el privilegio de trabajar en
-          una <a href="https://shf.com.co/">empresa de desarrollo emergente</a>.
-          Mi enfoque principal en estos días es construir productos accesibles y
-          experiencias digitales en una variedad de tecnologías.
+          una{" "}
+          <a target="_new" href="https://shf.com.co/">
+            empresa de desarrollo emergente
+          </a>
+          . Mi enfoque principal en estos días es construir productos accesibles
+          y experiencias digitales en una variedad de tecnologías.
         </p>
         <p>
           Soy estudiante de Ingeniería de Sistemas de la
-          <a href="https://www.uis.edu.co">
+          <a target="_new" href="https://www.uis.edu.co">
             Universidad Industrial de Santander
           </a>{" "}
           y actualmente soy desarrollador de software de{" "}
-          <a href="https://shf.com.co/" rel="noreferrer">
+          <a href="https://shf.com.co/" target="_new">
             SHF S.A.S
           </a>
           .
