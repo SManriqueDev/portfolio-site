@@ -5,11 +5,13 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero"
+import AboutMe from "../components/about-me"
 
 const IndexPage = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Inicio" />
     <Hero />
+    <AboutMe />
 
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>

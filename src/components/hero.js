@@ -1,15 +1,7 @@
 import * as React from "react"
 import Btn from "./btn"
 const Hero = () => (
-  <section
-    style={{
-      display: "flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "flex-start",
-      minHeight: "100vh",
-    }}
-  >
+  <section className="section">
     <h6
       style={{
         fontFamily: "var(--font-mono)",
@@ -23,7 +15,7 @@ const Hero = () => (
       Sebastian Manrique.
     </h2>
     <h2 style={{ fontWeight: "600" }}>Creador de software web.</h2>
-    <p style={{ fontSize: "1.2rem", maxWidth: "540px" }}>
+    <p style={{ maxWidth: "540px" }}>
       Soy ingeniero de sistemas en formación y desarrollador de software
       especializado en la creación de experiencias digitales en la web. Me gusta
       el software que busca aportar cambios y valor al mundo.
