@@ -1,14 +1,29 @@
 import * as React from "react"
 import * as aboutStyles from "./about-me.module.css"
-import { StaticImage } from "gatsby-plugin-image"
+// import { StaticImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
+import Image from "gatsby-image"
 
-const allStrapiTechnologiesQuery = graphql`
+export const allStrapiAboutQuery = graphql`
   {
-    allStrapiTechnologies {
+    allStrapiAbout {
       nodes {
-        name
         strapiId
+        title
+        info
+        profilePic {
+          localFile {
+            childImageSharp {
+              fixed(width: 300, height: 300) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+        }
+        stack {
+          id
+          name
+        }
       }
     }
   }
@@ -16,19 +31,17 @@ const allStrapiTechnologiesQuery = graphql`
 
 const AboutMe = () => {
   const {
-    allStrapiTechnologies: { nodes: technologies },
-  } = useStaticQuery(allStrapiTechnologiesQuery)
-  console.log(
-    "🚀 ~ file: about-me.js ~ line 21 ~ AboutMe ~ technologies",
-    technologies
-  )
-
+    allStrapiAbout: { nodes },
+  } = useStaticQuery(allStrapiAboutQuery)
+  console.log("🚀 ~ file: about-me.js ~ line 35 ~ AboutMe ~ nodes", nodes)
+  const { title, profilePic, stack, info } = nodes[0]
   return (
     <section className="section">
       <h4 className="section-heading">Sobre mi</h4>
       <div className={aboutStyles.grid}>
         <div>
-          <p>
+          <div dangerouslySetInnerHTML={{ __html: info }} />
+          {/* <p>
             ¡Hola! Mi nombre es Sebastian y disfruto mucho crear software que
             aporta cambios y valor al mundo. Mi interés en el desarrollo comenzó
             en 2014 en los inicios de mi carrera, descubrí un universo de cosas
@@ -55,15 +68,15 @@ const AboutMe = () => {
               SHF S.A.S
             </a>
             .
-          </p>
+          </p> */}
 
           <p>
             A continuación, se muestran algunas tecnologías con las que he
             estado trabajando recientemente:
           </p>
           <ul className={aboutStyles.skills_list}>
-            {technologies.map(technology => (
-              <li key={technology.strapiId}>{technology.name}</li>
+            {stack.map(s => (
+              <li key={s.id}>{s.name}</li>
             ))}
             {/* <li>JavaScript (ES6+)</li>
             <li>Vue</li>
@@ -81,13 +94,11 @@ const AboutMe = () => {
 
         <div className={aboutStyles.profile_pic}>
           <div className={aboutStyles.profile_wrapper}>
-            <StaticImage
-              src="../images/profile-pic.jpeg"
-              width={300}
-              height={300}
+            <Image
+              fixed={profilePic.localFile.childImageSharp.fixed}
+              // width={300}
+              // height={300}
               className={aboutStyles.img}
-              quality={95}
-              formats={["auto", "webp", "avif"]}
               alt="Profile picture"
             />
           </div>

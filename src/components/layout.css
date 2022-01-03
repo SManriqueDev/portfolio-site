@@ -152,6 +152,10 @@ a {
   background-color: var(--lightest-navy);
 }
 
+p {
+  margin: 0px 0px 15px;
+}
+
 p > a {
   display: inline-block;
   text-decoration: none;

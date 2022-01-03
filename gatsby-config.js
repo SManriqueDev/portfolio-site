@@ -38,8 +38,10 @@ module.exports = {
       resolve: `gatsby-source-strapi`,
       options: {
         apiURL: `https://sm-porfolio.herokuapp.com`,
-        queryLimit: 100, // Defaults to 100
-        collectionTypes: [`technologies`],
+        // apiURL: `http://localhost:1337`,
+        queryLimit: 1000, // Defaults to 100
+        collectionTypes: [],
+        singleTypes: [`about`],
       },
     },
   ],
