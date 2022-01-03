@@ -3,25 +3,25 @@ import * as aboutStyles from "./about-me.module.css"
 import { StaticImage } from "gatsby-plugin-image"
 import { useStaticQuery, graphql } from "gatsby"
 
-// const allStrapiTechnologiesQuery = graphql`
-//   {
-//     allStrapiTechnologies {
-//       nodes {
-//         name
-//         strapiId
-//       }
-//     }
-//   }
-// `
+const allStrapiTechnologiesQuery = graphql`
+  {
+    allStrapiTechnologies {
+      nodes {
+        name
+        strapiId
+      }
+    }
+  }
+`
 
 const AboutMe = () => {
-  // const {
-  //   allStrapiTechnologies: { nodes: technologies },
-  // } = useStaticQuery(allStrapiTechnologiesQuery)
-  // console.log(
-  //   "🚀 ~ file: about-me.js ~ line 21 ~ AboutMe ~ technologies",
-  //   technologies
-  // )
+  const {
+    allStrapiTechnologies: { nodes: technologies },
+  } = useStaticQuery(allStrapiTechnologiesQuery)
+  console.log(
+    "🚀 ~ file: about-me.js ~ line 21 ~ AboutMe ~ technologies",
+    technologies
+  )
 
   return (
     <section className="section">
@@ -62,10 +62,10 @@ const AboutMe = () => {
             estado trabajando recientemente:
           </p>
           <ul className={aboutStyles.skills_list}>
-            {/* {technologies.map(technology => (
+            {technologies.map(technology => (
               <li key={technology.strapiId}>{technology.name}</li>
-            ))} */}
-            <li>JavaScript (ES6+)</li>
+            ))}
+            {/* <li>JavaScript (ES6+)</li>
             <li>Vue</li>
             <li>NuxtJS</li>
             <li>Node</li>
@@ -75,7 +75,7 @@ const AboutMe = () => {
             <li>GraphQL</li>
             <li>Docker</li>
             <li>Dart</li>
-            <li>Flutter</li>
+            <li>Flutter</li> */}
           </ul>
         </div>
 
