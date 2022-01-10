@@ -1,0 +1,30 @@
+.jobs_description {
+  width: 100%;
+  height: auto;
+  padding: 10px 5px;
+  margin-left: 20px;
+}
+
+.date {
+  margin-bottom: 25px;
+  color: var(--light-slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+}
+.jobs_description ul {
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  font-size: var(--fz-lg);
+}
+.jobs_description ul li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+.jobs_description ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0px;
+  color: var(--green);
+}

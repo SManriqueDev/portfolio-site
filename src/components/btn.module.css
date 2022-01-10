@@ -6,4 +6,6 @@
   border-radius: var(--border-radius);
   outline: none;
   font-family: var(--font-mono);
+  border: 1px solid var(--green);
+  cursor: pointer;
 }

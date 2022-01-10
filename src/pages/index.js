@@ -3,12 +3,14 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Hero from "../components/hero"
 import AboutMe from "../components/about-me"
+import Jobs from "../components/jobs"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Inicio" />
     <Hero />
     <AboutMe />
+    <Jobs />
 
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>

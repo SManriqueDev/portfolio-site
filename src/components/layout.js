@@ -35,7 +35,7 @@ const Layout = ({ children }) => {
           }
         }
       >
-        <main>{children}</main>
+        <main style={{ counterReset: "section 0" }}>{children}</main>
         <footer
           style={{
             marginTop: `2rem`,

@@ -1,0 +1,26 @@
+.tab_button {
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  position: relative;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 100%;
+  height: var(--tab-height);
+  padding: 0px 20px 2px;
+  border-left: 2px solid var(--lightest-navy);
+  background-color: transparent;
+  color: var(--slate);
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.tab_button:focus,
+.tab_button:hover,
+.tab_button:active {
+  background-color: var(--light-navy);
+  color: var(--green);
+  outline: 0px;
+}
