@@ -1,7 +1,8 @@
 import * as React from "react"
 import Btn from "./btn"
+import * as heroStyles from "./hero.module.css"
 const Hero = () => (
-  <section className="section">
+  <section className={heroStyles.hero} id="">
     <h6
       style={{
         fontFamily: "var(--font-mono)",

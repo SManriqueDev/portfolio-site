@@ -36,7 +36,7 @@ const Jobs = () => {
 
   return (
     <section
-      className="section"
+      className=""
       id="jobs"
       style={{
         maxWidth: "700px",

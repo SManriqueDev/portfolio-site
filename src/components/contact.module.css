@@ -1,0 +1,20 @@
+.contact {
+  max-width: 600px;
+  margin: 0px auto 100px;
+  text-align: center;
+}
+.contact_heading {
+  display: block;
+  color: var(--green);
+  font-family: var(--font-mono);
+  font-size: var(--fz-md);
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+.contact_heading::before {
+  bottom: 0px;
+  font-size: var(--fz-sm);
+}
+.contact_heading::after {
+  display: none;
+}

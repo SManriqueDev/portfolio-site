@@ -4,6 +4,7 @@ import Seo from "../components/seo"
 import Hero from "../components/hero"
 import AboutMe from "../components/about-me"
 import Jobs from "../components/jobs"
+import Contact from "../components/contact"
 
 const IndexPage = () => (
   <Layout>
@@ -11,6 +12,7 @@ const IndexPage = () => (
     <Hero />
     <AboutMe />
     <Jobs />
+    <Contact />
 
     {/* <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>

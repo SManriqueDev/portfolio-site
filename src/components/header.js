@@ -8,7 +8,9 @@ const Header = ({ siteTitle }) => (
     <nav className={headerStyles.nav}>
       {/* Logo */}
       <div className={headerStyles.logo}>
-        <Logo />
+        <a href="#">
+          <Logo />
+        </a>
       </div>
       {/* Menu */}
       <div className={headerStyles.menu}>

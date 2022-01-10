@@ -36,7 +36,7 @@ const AboutMe = () => {
   console.log("🚀 ~ file: about-me.js ~ line 35 ~ AboutMe ~ nodes", nodes)
   const { title, profilePic, stack, info } = nodes[0]
   return (
-    <section className="section" id="about">
+    <section className="" id="about">
       <h4 className="section-heading">{title}</h4>
       <div className={aboutStyles.grid}>
         <div>
