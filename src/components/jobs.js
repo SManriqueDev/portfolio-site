@@ -37,6 +37,7 @@ const Jobs = () => {
   return (
     <section
       className="section"
+      id="jobs"
       style={{
         maxWidth: "700px",
       }}
@@ -51,6 +52,7 @@ const Jobs = () => {
         >
           {jobs.map(job => (
             <TabButton
+              key={job.strapiId}
               style={currentJob.strapiId === job.strapiId ? activeStyles : {}}
               onClick={() => setCurrentJob(job)}
             >
@@ -76,7 +78,7 @@ const Jobs = () => {
           <p className={jobsStyles.date}>{currentJob.date}</p>
           <ul>
             {currentJob.descriptions.map(description => (
-              <li>{description.name}</li>
+              <li key={description.id}>{description.name}</li>
             ))}
           </ul>
         </div>

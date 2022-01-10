@@ -11,6 +11,9 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import Side from "./side"
+import { GitHub, Instagram, Linkedin, Twitter } from "react-feather"
+import SocialList from "./social-list"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,26 +29,25 @@ const Layout = ({ children }) => {
   return (
     <div style={{ display: "flex", flexDirection: "column" }}>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={
-          {
-            // margin: `0 auto`,
-            // maxWidth: 960,
-            // padding: `0 1.0875rem 1.45rem`,
-          }
-        }
+      <Side orientation="left">
+        <SocialList />
+      </Side>
+      <Side orientation="right">
+        <a href="mailto:yhoan.manrique@gmail.com">yhoan.manrique@gmail.com</a>
+      </Side>
+
+      <main style={{ counterReset: "section 0" }}>{children}</main>
+      <footer
+        style={{
+          marginTop: `2rem`,
+          display: "flex",
+          justifyContent: "center",
+        }}
       >
-        <main style={{ counterReset: "section 0" }}>{children}</main>
-        <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
-      </div>
+        © {new Date().getFullYear()}, Built with
+        {` `}
+        <a href="https://www.gatsbyjs.com">Gatsby</a>
+      </footer>
     </div>
   )
 }
