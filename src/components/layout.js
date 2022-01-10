@@ -14,6 +14,7 @@ import "./layout.css"
 import Side from "./side"
 import { GitHub, Instagram, Linkedin, Twitter } from "react-feather"
 import SocialList from "./social-list"
+import Footer from "./footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -37,17 +38,7 @@ const Layout = ({ children }) => {
       </Side>
 
       <main style={{ counterReset: "section 0" }}>{children}</main>
-      <footer
-        style={{
-          marginTop: `2rem`,
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        © {new Date().getFullYear()}, Built with
-        {` `}
-        <a href="https://www.gatsbyjs.com">Gatsby</a>
-      </footer>
+      <Footer />
     </div>
   )
 }
