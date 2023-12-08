@@ -37,7 +37,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `https://sm-porfolio.herokuapp.com`,
+        apiURL: `https://ysm-portfolio-26afefa891bb.herokuapp.com`,
         // apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Defaults to 100
         collectionTypes: [`jobs`, `socials`],

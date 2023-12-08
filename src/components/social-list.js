@@ -30,7 +30,7 @@ const SocialList = () => {
         return (
           <li key={social.strapiId}>
             <a href={social.url} target="_new">
-              <Icon />
+              {Icon && <Icon />}
             </a>
           </li>
         )
