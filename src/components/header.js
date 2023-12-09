@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => {
       <nav className={headerStyles.nav}>
         {/* Logo */}
         <div className={headerStyles.logo}>
-          <a href="#">
+          <a href="#about">
             <Logo />
           </a>
         </div>
