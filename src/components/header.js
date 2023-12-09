@@ -1,39 +1,65 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import Btn from "../components/btn"
+import LinkBtn from "../components/link-btn"
 import * as headerStyles from "./header.module.css"
 import Logo from "../components/personal-logo"
-const Header = ({ siteTitle }) => (
-  <header className={headerStyles.header}>
-    <nav className={headerStyles.nav}>
-      {/* Logo */}
-      <div className={headerStyles.logo}>
-        <a href="#">
-          <Logo />
-        </a>
-      </div>
-      {/* Menu */}
-      <div className={headerStyles.menu}>
-        <ol>
-          <li className={headerStyles.item}>
-            <a href="/#about">Sobre mi</a>{" "}
-          </li>
-          <li className={headerStyles.item}>
-            <a href="/#jobs">Experiencia</a>
-          </li>
+import { useStaticQuery, graphql } from "gatsby"
 
-          <li className={headerStyles.item}>
-            <a href="/#projects">Mi trabajo</a>
-          </li>
-          <li className={headerStyles.item}>
-            <a href="/#contact">Contactame</a>
-          </li>
-        </ol>
-        <Btn style={{ marginLeft: "15px" }}>Currículo</Btn>
-      </div>
-    </nav>
-  </header>
-)
+export const allStrapiAboutQuery = graphql`
+  {
+    allStrapiAbout {
+      nodes {
+        strapiId
+        resumeUrl
+      }
+    }
+  }
+`
+const Header = ({ siteTitle }) => {
+  const {
+    allStrapiAbout: { nodes },
+  } = useStaticQuery(allStrapiAboutQuery)
+
+  const { resumeUrl } = nodes[0]
+
+  return (
+    <header className={headerStyles.header}>
+      <nav className={headerStyles.nav}>
+        {/* Logo */}
+        <div className={headerStyles.logo}>
+          <a href="#">
+            <Logo />
+          </a>
+        </div>
+        {/* Menu */}
+        <div className={headerStyles.menu}>
+          <ol>
+            <li className={headerStyles.item}>
+              <a href="/#about">Sobre mi</a>{" "}
+            </li>
+            <li className={headerStyles.item}>
+              <a href="/#jobs">Experiencia</a>
+            </li>
+
+            <li className={headerStyles.item}>
+              <a href="/#projects">Mi trabajo</a>
+            </li>
+            <li className={headerStyles.item}>
+              <a href="/#contact">Contactame</a>
+            </li>
+          </ol>
+          <LinkBtn
+            style={{ marginLeft: "15px" }}
+            href={resumeUrl}
+            target="_blank"
+          >
+            Currículo
+          </LinkBtn>
+        </div>
+      </nav>
+    </header>
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
