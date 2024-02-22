@@ -12,7 +12,6 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import Side from "./side"
-import { GitHub, Instagram, Linkedin, Twitter } from "react-feather"
 import SocialList from "./social-list"
 import Footer from "./footer"
 

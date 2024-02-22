@@ -1,5 +1,4 @@
 import * as React from "react"
-import Btn from "./btn"
 import * as heroStyles from "./hero.module.css"
 import LinkBtn from "./link-btn"
 import { useStaticQuery, graphql } from "gatsby"

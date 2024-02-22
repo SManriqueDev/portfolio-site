@@ -1,0 +1,29 @@
+.featured-projects {
+}
+
+.project-overline {
+  color: var(--green);
+  font-size: var(--fz-xs);
+  font-family: var(--font-mono);
+}
+
+.project-description {
+  background: var(--light-navy);
+  padding: 21px;
+  border-radius: 8px;
+  width: "80%";
+  transition: var(--transition);
+}
+.project-description:hover {
+  box-shadow: 0 20px 30px -15px var(--navy-shadow);
+}
+
+.project-stack-list {
+  list-style: none;
+  display: flex;
+  margin: 21px 0 13px;
+  padding: 0px;
+}
+.project-stack-list li {
+  margin: 0 20px 5px 0;
+}
