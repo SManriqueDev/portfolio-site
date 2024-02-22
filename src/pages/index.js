@@ -1,11 +1,11 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
-import Hero from "../components/hero"
-import AboutMe from "../components/about-me"
-import Jobs from "../components/jobs"
-import Contact from "../components/contact"
-import FeaturedProjects from '../components/featured-projects'
+import Seo from "../components/common/seo"
+import Hero from "../components/sections/hero"
+import AboutMe from "../components/sections/about-me"
+import Jobs from "../components/sections/jobs"
+import Contact from "../components/sections/contact"
+import FeaturedProjects from "../components/sections/featured-projects"
 
 const IndexPage = () => (
   <Layout>
@@ -15,7 +15,6 @@ const IndexPage = () => (
     <Jobs />
     <FeaturedProjects />
     <Contact />
-
   </Layout>
 )
 

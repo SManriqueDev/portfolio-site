@@ -1,5 +1,5 @@
 import * as React from "react"
-import Btn from "./btn"
+import Btn from "../common/btn"
 
 import * as contactStyles from "./contact.module.css"
 

@@ -9,11 +9,11 @@ import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Header from "./sections/header"
 import "./layout.css"
-import Side from "./side"
-import SocialList from "./social-list"
-import Footer from "./footer"
+import Side from "./common/side"
+import SocialList from "./common/social-list"
+import Footer from "./sections/footer"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
