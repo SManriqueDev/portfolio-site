@@ -35,6 +35,8 @@
   gap: 10px;
   grid-template-columns: repeat(12, 1fr);
   max-width: 1000px !important;
+  align-items: center;
+  margin: 13px;
 }
 
 .project-content {
