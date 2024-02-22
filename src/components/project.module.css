@@ -1,6 +1,3 @@
-.featured-projects {
-}
-
 .project-overline {
   color: var(--green);
   font-size: var(--fz-xs);
@@ -26,4 +23,34 @@
 }
 .project-stack-list li {
   margin: 0 20px 5px 0;
+}
+
+.project-links a {
+  padding: 10px;
+}
+
+.project {
+  display: grid;
+  position: relative;
+  gap: 10px;
+  grid-template-columns: repeat(12, 1fr);
+  max-width: 1000px !important;
+}
+
+.project-content {
+  position: relative;
+  grid-area: 1/1/-1/7;
+  z-index: 2;
+}
+.project-image {
+  grid-area: 1/6/-1/-1;
+  z-index: 1;
+  position: relative;
+}
+
+.project-image img {
+  border-radius: var(--border-radius);
+}
+
+.picture {
 }
