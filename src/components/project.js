@@ -12,9 +12,9 @@ const Project = ({ project }) => {
             fluid={project.picture.localFile.childImageSharp.fluid}
             className={projectStyles.picture}
             alt="Project image"
-            objectFit="cover"
+            objectFit="fill"
             style={{
-              height: "100%",
+              height: "360px",
               maxWidth: "100%",
             }}
           />
