@@ -18,10 +18,27 @@
   border-radius: var(--border-radius);
   background-color: var(--green);
 }
+
+.profile_wrapper::before {
+  top: 0px;
+  left: 0px;
+  background-color: var(--navy);
+  mix-blend-mode: screen;
+
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
 .profile_wrapper:hover {
-  background: transparent;
+  /* background: transparent; */
   outline: 0px;
   box-shadow: 0 20px 30px -15px var(--navy-shadow);
+  transform: translate(-4px, -4px);
 }
 
 .profile_wrapper:hover .img {
@@ -46,7 +63,13 @@
   width: 100%;
   height: 100%;
   border-radius: var(--border-radius);
+  transition: var(--transition);
 }
+
+.profile_wrapper:hover::after {
+  transform: translate(8px, 8px);
+}
+
 .skills_list {
   display: grid;
   grid-template-columns: repeat(3, minmax(140px, 200px));
