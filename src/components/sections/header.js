@@ -1,8 +1,8 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import LinkBtn from "../components/link-btn"
+import LinkBtn from "../common/link-btn"
 import * as headerStyles from "./header.module.css"
-import Logo from "../components/personal-logo"
+import Logo from "../common/personal-logo"
 import { useStaticQuery, graphql } from "gatsby"
 
 export const allStrapiAboutQuery = graphql`

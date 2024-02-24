@@ -1,7 +1,6 @@
 import * as React from "react"
-import Btn from "./btn"
 import * as heroStyles from "./hero.module.css"
-import LinkBtn from "./link-btn"
+import LinkBtn from "../common/link-btn"
 import { useStaticQuery, graphql } from "gatsby"
 
 export const allStrapiAboutQuery = graphql`
@@ -42,7 +41,11 @@ const Hero = () => {
         gusta el software que busca aportar cambios y valor al mundo.
       </p>
 
-      <LinkBtn style={{ marginTop: `1.45rem` }} href={resumeUrl} target="_blank">
+      <LinkBtn
+        style={{ marginTop: `1.45rem` }}
+        href={resumeUrl}
+        target="_blank"
+      >
         Descargar CV!
       </LinkBtn>
     </section>

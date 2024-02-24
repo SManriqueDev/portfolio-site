@@ -1,25 +1,24 @@
 import { useStaticQuery, graphql } from "gatsby"
 import * as React from "react"
-import TabButton from "../components/tab-button"
+import TabButton from "../common/tab-button"
 import * as jobsStyles from "./jobs.module.css"
 
 export const allStrapiJobsQuery = graphql`
-{
-  allStrapiJobs(sort: {fields: id, order: DESC}) {
-    nodes {
-      company
-      companyWebsite
-      date
-      position
-      strapiId
-      descriptions {
-        id
-        name
+  {
+    allStrapiJobs(sort: { fields: id, order: DESC }) {
+      nodes {
+        company
+        companyWebsite
+        date
+        position
+        strapiId
+        descriptions {
+          id
+          name
+        }
       }
     }
   }
-}
-
 `
 
 const Jobs = () => {

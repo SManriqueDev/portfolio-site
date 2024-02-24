@@ -1,10 +1,11 @@
 import * as React from "react"
 import Layout from "../components/layout"
-import Seo from "../components/seo"
-import Hero from "../components/hero"
-import AboutMe from "../components/about-me"
-import Jobs from "../components/jobs"
-import Contact from "../components/contact"
+import Seo from "../components/common/seo"
+import Hero from "../components/sections/hero"
+import AboutMe from "../components/sections/about-me"
+import Jobs from "../components/sections/jobs"
+import Contact from "../components/sections/contact"
+import FeaturedProjects from "../components/sections/featured-projects"
 
 const IndexPage = () => (
   <Layout>
@@ -12,25 +13,8 @@ const IndexPage = () => (
     <Hero />
     <AboutMe />
     <Jobs />
+    <FeaturedProjects />
     <Contact />
-
-    {/* <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
-      <Link to="/using-dsg">Go to "Using DSG"</Link>
-    </p> */}
   </Layout>
 )
 
