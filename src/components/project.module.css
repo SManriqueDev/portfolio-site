@@ -36,7 +36,7 @@
   grid-template-columns: repeat(12, 1fr);
   max-width: 1000px !important;
   align-items: center;
-  margin: 13px;
+  margin-bottom: 100px;
 }
 
 .project-content {
@@ -49,28 +49,48 @@
   z-index: 1;
   position: relative;
   box-shadow: 0 10px 30px -15px var(--navy-shadow);
-  transition: var(--transition);
-  display: block;
+}
+.project-image a {
   width: 100%;
-  height: auto;
-  border-radius: var(--border-radius);
+  height: 100%;
   background-color: var(--green);
+  border-radius: var(--border-radius);
+  vertical-align: middle;
 }
 
 .project-image img {
   border-radius: var(--border-radius);
-  position: relative;
   mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(1);
+  filter: grayscale(100%) contrast(1) brightness(90%);
+}
+
+.project-image a:hover {
+  background: transparent;
+  outline: 0px;
+}
+
+.project-image a:hover img {
+  filter: none;
+  mix-blend-mode: normal;
+}
+
+.project-image a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  inset: 0px;
+  z-index: 3;
+  transition: var(--transition);
+  background-color: var(--navy);
+  mix-blend-mode: screen;
+}
+
+.project-image a:hover::before {
+  background: transparent;
+  filter: none;
 }
 
 .project-image:hover {
-  background: transparent;
-  outline: 0px;
   box-shadow: 0 20px 30px -15px var(--navy-shadow);
-}
-
-.project-image:hover img {
-  filter: none;
-  mix-blend-mode: normal;
 }
