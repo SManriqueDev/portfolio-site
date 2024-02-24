@@ -44,5 +44,17 @@ module.exports = {
         singleTypes: [`about`],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-E2T6ZSTJFX", // Google Analytics / GA
+        ],
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
+      },
+    },
   ],
 }
