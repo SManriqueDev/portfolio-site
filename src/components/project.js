@@ -1,7 +1,7 @@
 import React from "react"
 import * as projectStyles from "./project.module.css"
 import * as Icons from "react-feather"
-import Image from "gatsby-image"
+import Image from "gatsby-image/withIEPolyfill"
 
 const Project = ({ project }) => {
   return (
@@ -11,6 +11,10 @@ const Project = ({ project }) => {
           fluid={project.picture.localFile.childImageSharp.fluid}
           className={projectStyles.picture}
           alt="Project image"
+          objectFit="fill"
+          style={{
+            height: "350px",
+          }}
         />
       </div>
       <div className={projectStyles.projectContent}>
@@ -38,13 +42,17 @@ const Project = ({ project }) => {
         </ul>
 
         <div className={projectStyles.projectLinks}>
-          <a href={project.github} target="_new">
-            {<Icons.GitHub />}
-          </a>
+          {project.github && (
+            <a href={project.github} target="_new">
+              {<Icons.GitHub />}
+            </a>
+          )}
 
-          <a href={project.url} target="_new">
-            {<Icons.ExternalLink />}
-          </a>
+          {project.url && (
+            <a href={project.url} target="_new">
+              {<Icons.ExternalLink />}
+            </a>
+          )}
         </div>
       </div>
     </div>

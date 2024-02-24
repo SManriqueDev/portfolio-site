@@ -48,11 +48,29 @@
   grid-area: 1/6/-1/-1;
   z-index: 1;
   position: relative;
+  box-shadow: 0 10px 30px -15px var(--navy-shadow);
+  transition: var(--transition);
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius);
+  background-color: var(--green);
 }
 
 .project-image img {
   border-radius: var(--border-radius);
+  position: relative;
+  mix-blend-mode: multiply;
+  filter: grayscale(100%) contrast(1);
 }
 
-.picture {
+.project-image:hover {
+  background: transparent;
+  outline: 0px;
+  box-shadow: 0 20px 30px -15px var(--navy-shadow);
+}
+
+.project-image:hover img {
+  filter: none;
+  mix-blend-mode: normal;
 }
